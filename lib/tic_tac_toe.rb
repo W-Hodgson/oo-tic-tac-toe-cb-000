@@ -79,6 +79,15 @@ class TicTacToe
     count
   end
 
+  def current_player
+    count = turn_count
+    if count % 2 == 0
+      'X'
+    else
+      'O'
+    end
+  end
+
   def turn
     puts "Enter a position, from 1-9"
     input = gets.strip
