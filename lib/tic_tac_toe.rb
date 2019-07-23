@@ -36,4 +36,12 @@ class TicTacToe
     @board.none? {|position| position == " "}
   end
 
+  def draw?
+    if !won?(@board) && full?(@board)
+      true
+    else
+      false
+    end
+  end
+
 end
